@@ -1,0 +1,7 @@
+node_modules/
+.carematric-data/
+server/data/
+.env
+.env.local
+tsconfig.tsbuildinfo
+*.log

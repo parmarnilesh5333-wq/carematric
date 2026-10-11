@@ -1,0 +1,44 @@
+{
+  "name": "carematric-ai",
+  "private": true,
+  "version": "1.0.0",
+  "description": "CareMatric AI — Multilingual Medical Laboratory Report Analysis & Health Literacy Platform",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"tsx watch --ignore .carematric-data/** server/index.ts\" \"vite --port 5173\"",
+    "dev:client": "vite --port 5173",
+    "dev:server": "tsx watch --ignore .carematric-data/** server/index.ts",
+    "build": "tsc -b && vite build && node scripts/build-api.mjs",
+    "start": "node --import tsx server/index.ts"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "lucide-react": "^0.475.0",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "pdfkit": "^0.16.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.1.5",
+    "tesseract.js": "^6.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.13.4",
+    "@types/pdfkit": "^0.13.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.5.2",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vite": "^6.1.0"
+  }
+}

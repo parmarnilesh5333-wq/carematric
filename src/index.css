@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', 'Noto Sans Devanagari', 'Noto Sans Gujarati', 'Noto Sans Arabic', system-ui, -apple-system, sans-serif;
+    color: #f8fafc;
+    background-color: #040711;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+}
+
+/* Multilingual script refinements */
+.lang-ur {
+  font-family: 'Noto Sans Arabic', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.85;
+}
+
+.lang-hi {
+  font-family: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.7;
+}
+
+.lang-gu {
+  font-family: 'Noto Sans Gujarati', 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.7;
+}
+
+/* Dark theme scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070b19;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
